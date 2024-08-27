@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
-const FundoGradiente = styled
+const FundoGradiente = styled.div``
 function App() {
 
   return (
-    <>
+    <FundoGradiente>
       
-    </>
+    </FundoGradiente>
   )
 }
 
