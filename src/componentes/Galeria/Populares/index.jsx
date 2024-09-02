@@ -1,5 +1,7 @@
+import Titulo from "../../Titulo"
+
 const Populares = () => {
-    return <h2>Populares</h2>
+    return <Titulo $alinhamento="center">Populares</Titulo>
 }
 
 export default Populares
