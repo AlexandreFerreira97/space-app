@@ -22,7 +22,7 @@ const TituloEstilizado = styled.h1`
     max-width: 300px;
     padding: 0 64px;
 `
-const Banner = ({texto,backgroundImage}) => {
+const Banner = ({texto}) => {
 
     return (<ImagemEstilizada>
         <TituloEstilizado>{texto}</TituloEstilizado>
