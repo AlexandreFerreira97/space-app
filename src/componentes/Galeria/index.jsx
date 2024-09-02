@@ -1,6 +1,9 @@
+import Titulo from "../Titulo"
 
 const Galeria = () => {
-    return <h2>Navegue pela galeria</h2>
+    return (
+        <Titulo>Navegue pela galeria</Titulo>
+    )
 }
 
 export default Galeria
