@@ -3,8 +3,9 @@ import styled from "styled-components"
 
 const TagContainer = styled.div`
     display: flex;
-    gap: 3rem;
-    margin-top: 0.4rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
 `
 
 const TagTitulo = styled.h3`
