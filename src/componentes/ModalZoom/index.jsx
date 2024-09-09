@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Imagem from "../Galeria/Imagem"
+import BotaoIcone from "../BotaoIcone"
 
 const Overlay = styled.div`
     background-color: rgba(0,0,0,0.7);
@@ -12,9 +13,19 @@ const Overlay = styled.div`
 const DialogEstilizado = styled.dialog`
     position: absolute;
     top: 294px;
+    padding: 0;
+    border: 0;
+    width: 1156px;
+    display: flex;
+    justify-content: center;
+    form{
+        position: relative;
+        top: 20px;
+        right: 60px;
+    }
 `
 
-const ModalZoom = ({ foto }) => {
+const ModalZoom = ({ foto, aoFechar }) => {
     return (
         <>
             {foto && <>
@@ -22,7 +33,9 @@ const ModalZoom = ({ foto }) => {
                 <DialogEstilizado open={!!foto}>
                     <Imagem foto={foto} expandida={true} />
                     <form method="dialog">
-                        <button>OK</button>
+                        <BotaoIcone formMethod="dialog">
+                            OK
+                        </BotaoIcone>
                     </form>
                 </DialogEstilizado>
             </>}
