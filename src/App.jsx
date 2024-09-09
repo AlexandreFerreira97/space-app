@@ -33,8 +33,8 @@ const  App = () =>  {
 
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
 
-  const aoAlternarFavorito = (foto) =>{
-
+  const aoAlternarFavorito = (foto) => {
+      console.log(foto)
   }
 
   return (
