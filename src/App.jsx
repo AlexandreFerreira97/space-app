@@ -33,6 +33,10 @@ const  App = () =>  {
 
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
 
+  const aoAlternarFavorito = (foto) =>{
+
+  }
+
   return (
     <FundoGradiente>
       <EstiloGlobais />
@@ -42,11 +46,11 @@ const  App = () =>  {
           <BarraLateral/>
           <ConteudoGaleria>
             <Banner texto={'A galeria mais completa de fotos do espaço'}/>
-            <Galeria aoFotoSelecionada = {foto => setFotoSelecionada(foto)} fotos = {fotosGaleria}/>
+            <Galeria aoFotoSelecionada = {foto => setFotoSelecionada(foto)} aoAlternarFavorito={aoAlternarFavorito} fotos = {fotosGaleria}/>
           </ConteudoGaleria>
         </MainContainer>
       </AppContainer>
-      <ModalZoom foto={fotoSelecionada}/>
+      <ModalZoom foto={fotoSelecionada} aoFechar={() => setFotoSelecionada(null)}/>
     </FundoGradiente>
   )
 }
