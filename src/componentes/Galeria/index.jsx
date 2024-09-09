@@ -18,7 +18,7 @@ const Galeria = ({fotos = [], aoFotoSelecionada, aoAlternarFavorito}) => {
             <GaleriaContainer>
                 <SecaoFluida>
                     <Titulo>Navegue pela galeria</Titulo>
-                    {fotos.map(foto => <Imagem aoZoomSolicitado={aoFotoSelecionada} key={foto.id} foto={foto}/>)}
+                    {fotos.map(foto => <Imagem aoZoomSolicitado={aoFotoSelecionada} aoAlternarFavorito={aoAlternarFavorito} key={foto.id} foto={foto}/>)}
                 </SecaoFluida>
                 <Populares/>
             </GaleriaContainer>
