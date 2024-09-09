@@ -26,7 +26,7 @@ const ConteudoGaleria = styled.section`
   flex-grow: 1;
 `
 
-function App() {
+const  App = () =>  {
 
   return (
     <FundoGradiente>
