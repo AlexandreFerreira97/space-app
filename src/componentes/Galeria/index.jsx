@@ -11,14 +11,14 @@ const SecaoFluida = styled.section`
     flex-grow: 1;
 `
 
-const Galeria = ({fotos = []}) => {
+const Galeria = ({fotos = [], aoFotoSelecionada}) => {
     return (
         <>
             <Tags/>
             <GaleriaContainer>
                 <SecaoFluida>
                     <Titulo>Navegue pela galeria</Titulo>
-                    {fotos.map(foto => <Imagem key={foto.id} foto={foto}/>)}
+                    {fotos.map(foto => <Imagem aoZoomSolicitado={aoFotoSelecionada} key={foto.id} foto={foto}/>)}
                 </SecaoFluida>
                 <Populares/>
             </GaleriaContainer>
