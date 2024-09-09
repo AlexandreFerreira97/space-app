@@ -50,7 +50,7 @@ const Imagem = ({foto, expandida = false, aoZoomSolicitado, aoAlternarFavorito})
                 <Rodape>
                     <h4>{foto.fonte}</h4>
                     <BotaoIcone onClick={() => aoAlternarFavorito(foto)}>
-                        <img src={iconeFavorito}/>
+                        <img src={iconeFavorito} alt="fotoicone"/>
                     </BotaoIcone>
                     {!expandida && <BotaoIcone aria-hidden={expandida} onClick={() => aoZoomSolicitado(foto)}>
                         <img src="/icones/expandir.png" alt="Icone de expandir" />
