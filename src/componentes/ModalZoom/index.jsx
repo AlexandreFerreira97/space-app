@@ -9,18 +9,22 @@ const Overlay = styled.div`
     bottom: 0;
     left: 0;
 `
+const DialogEstilizado = styled.dialog`
+    position: absolute;
+    top: 294px;
+`
 
 const ModalZoom = ({ foto }) => {
     return (
         <>
             {foto && <>
                 <Overlay/>
-                <dialog open={!!foto}>
+                <DialogEstilizado open={!!foto}>
                     <Imagem foto={foto} expandida={true} />
                     <form method="dialog">
                         <button>OK</button>
                     </form>
-                </dialog>
+                </DialogEstilizado>
             </>}
         </>)
 }
