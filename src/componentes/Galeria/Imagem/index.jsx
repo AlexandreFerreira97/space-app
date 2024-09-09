@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import BotaoIcone from "../../BotaoIcone"
+
 
 const Figure= styled.figure`    
     width: ${(props) => (props.$expandida ? '90%' :  '460px')};
@@ -41,11 +43,15 @@ const Imagem = ({foto, expandida = false}) => {
         <Figure $expandida = {expandida} id={`foto-${foto.id}`}>
             <img src={foto.path} alt={foto.alt}/>
             <figcaption>
-                <h3>titulo</h3>
+                <h3>{foto.titulo}</h3>
                 <Rodape>
-                    <p>fonte</p>
-                    <button>Favorito</button>
-                    <button>Expandir</button>
+                    <p>{foto.fonte}</p>
+                    <BotaoIcone>
+                        <img src="../../../../public/icones/favorito.png"/>
+                    </BotaoIcone>
+                    {!expandida && <BotaoIcone aria-hidden={expandida}>
+                        <img src="/icones/expandir.png" alt="Icone de expandir" />
+                    </BotaoIcone>}
                 </Rodape>
             </figcaption>
         </Figure>
